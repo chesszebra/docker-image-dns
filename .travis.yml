@@ -1,0 +1,19 @@
+language: bash
+services: docker
+
+env:
+  - VERSION=1.0 VARIANT=
+
+before_script:
+  - env | sort
+  - cd "$VERSION"
+  - IMAGE_NAME="dns:${VERSION}${VARIANT:+-$VARIANT}"
+  - IMAGE_NAME="${IMAGE_NAME//'/'/-}"
+
+script:
+  - travis_retry docker build -t "IMAGE_NAME" "${VARIANT:-.}"
+
+after_script:
+  - docker images
+
+# vim:set et ts=2 sw=2:
