@@ -45,15 +45,3 @@ NetworkManager this is probably the easiest way to get it working:
 1. Skip the NetworkManager config since it does not apply.
 2. Start the container instead with `–publish 53:53/udp`
 3. Add `127.0.0.1` to `/etc/resolv.conf`
-
-## Building
-
-```bash
-./bin/build.sh
-```
-
-## Publish
-
-```bash
-docker push chesszebra/dns:latest
-```
