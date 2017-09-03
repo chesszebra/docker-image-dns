@@ -6,7 +6,7 @@ env:
 
 before_script:
   - env | sort
-  - cd "$VERSION"
+  - cd "src/$VERSION"
   - IMAGE_NAME="dns:${VERSION}${VARIANT:+-$VARIANT}"
   - IMAGE_NAME="${IMAGE_NAME//'/'/-}"
 
