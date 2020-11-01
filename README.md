@@ -1,7 +1,5 @@
 # docker-image-dns
 
-[![Build Status](https://travis-ci.org/chesszebra/docker-image-dns.svg?branch=master)](https://travis-ci.org/chesszebra/docker-image-dns)
-
 This repository contains the Docker image that can be used to set up 
 a local dns server. This DNS server will let you browse to containers
 by appending `.docker` to the container name in the browser.
